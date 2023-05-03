@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c94678c157.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+        <nav>
+            <div class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
+                <div class="flex text-2xl  sm:flex">
+                    <h1 id="hora">
+                        
+                    </h1>
+                </div>
+                <div class="flex">
+                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-white sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                        <a href="./index.html">Inicio</a>
+                        <a href="./index_2.html">Proyectos</a>
+                        <li>contacto</li>
+                    </ul>
+                        <div class="flex">
+                            <button id="botonNav" class="flex mt-5 sm:hidden">
+                                <i class="fa-solid fa-bars fa-2xl"></i>
+                            </button>
+                            <button id="xsNav" class="hidden flex mt-5 sm:hidden ">
+                                <i class="fa-solid fa-xmark fa-2xl"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    <main>
+        <div class=" flex flex-col justify-center items-center mt-[5.5rem] gap-2">
+            <!-- Imagen de perfil -->
+            <figure class="relative">
+                <img id="perfil" class="perfil relative w-[200px] h-[200px] box-border border-solid border-white  rounded-[50%] overflow-hidden shadow-lg shadow-slate-900 " src="./imagenes/una-taza-de-javascript.png" alt="">
+            </figure>
+            <!-- titulo con mi nombre -->
+            <div class="flex flex-col mt-3">
+                <h2 class="flex justify-center text-2xl">
+                    Hola! Soy Keyner Luque 
+                <h2/>
+                <!-- parrafo de que soy -->
+                <p class="flex justify-center text-2xl"> Web Developer</p>
+            </div>
+            <!-- iconos de las redes sociales -->
+            <div id="icono" class="flex gap-5">
+                <figure>
+                    <i class="fa-brands fa-instagram fa-fade"></i>
+                </figure>
+                <figure>
+                    <i class="fa-brands fa-whatsapp fa-fade"></i>
+                </figure>
+                <figure>
+                    <i class="fa-brands fa-github fa-fade"></i>
+                </figure>
+                <figure>
+                    <i class="fa-brands fa-twitter fa-fade"></i>
+                </figure>
+                <figure>
+                    <i class="fa-brands fa-linkedin fa-fade"></i>
+                </figure>
+            </div>
+        </div>
+        <!-- ACERCA DE MI -->
+        <div>
+            <div class="flex justify-center shadow-md shadow-slate-200  text-black text-2xl mt-[5rem]">
+                <h2>Acerca de mi</h2>
+            </div>
+            <div class="flex flex-col items-center mt-[3rem] ">
+                <figure class="flex  w-[300px] ">
+                    <img src="./imagenes/undraw_hacker_mindset_re_8a33.svg" alt="Imagen acerca de mi ">
+                </figure>
+            </div>
+            <div class="flex flex-col mt-[2rem] gap-1 items-center">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At tempore nemo laborum exercitationem, fugit rerum porro mollitia ut dolorum illum id voluptatibus voluptas sequi voluptate cumque quia, voluptatum doloremque est.</p>
+            </div>
+        </div>
+        <!-- HOBBY -->
+        <div>
+            <div class="flex justify-center shadow-md shadow-slate-200  text-black text-2xl mt-[1.5rem]">
+                <h2>Hobby</h2>
+            </div>
+            <div class="flex flex-col mt-[1.5rem] text-2xl items-center gap-[1.5rem]">
+                <figure class="w-[100px]">
+                    <img src="./imagenes/game-controller-outline.svg" alt="">
+                </figure>
+                <figure class="w-[100px]">
+                    <img src="./imagenes/./motor-scooter.svg" alt="">
+                </figure>
+                <figure class="w-[100px]">
+                    <img src="./imagenes/./running.svg" alt="">
+                </figure>
+                <figure class="w-[100px]">
+                    <img src="./imagenes/cinema.svg" alt="">
+                </figure>
+            </div>
+        </div>
+    </main>
+    <footer class="flex flex-col mt-[7rem]  shadow-inner shadow-slate-300">
+        <figure class="flex h-[100px] w-[200px] ">
+            <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
+        </figure>
+        <div class="flex flex-col items-center gap-2 text-[1rem] mt-[2rem] ">    
+            <div class="flex">
+                <ul class="flex flex-col items-center gap-3 px-2">
+                    <a href="./index.html">Inicio</a>
+                    <a href="./index_2.html">Acerca de mi</a>
+                    <li>Proyectos</li>
+                    <li>contacto</li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+</body>
+<script src="./proyecto.js"></script>
+</html>

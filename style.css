@@ -1,0 +1,147 @@
+/* Foto de perfil */
+.perfil{
+    transform: translatey(0px);
+	animation: float 10s ease-in-out infinite;
+}
+/* animacion foto de perfil */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+/* color de fondo transparente Nav-var */
+.liNav_class {
+    background-color: rgba(0,0,0,0.8);
+
+}
+
+/* contenedor barra % */
+.container{
+    display: flex;
+    color: rgb(14,13,13);
+    max-width: 320px;
+    height: 20px;
+    border: solid;
+    border-radius: 1rem;
+  /*   gap: 2rem; */
+
+}
+/* barra % html */
+.move{
+    border-radius: 1rem;
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    animation-name: slidein; 
+    animation-duration:  10s;
+    animation-fill-mode:  forwards;
+
+    /* animation-play-state: running; */
+}
+/* animacion barra % html */
+@keyframes slidein {
+    from{
+        width: 6%;
+    }
+
+    to{
+        width: 50%;
+    }
+}
+
+/* barra % css */
+.move_css{
+    border-radius: 1rem;
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    animation-name: slidein_css; 
+    animation-duration:  10s;
+    animation-fill-mode:  forwards;
+}
+/* animacion barra % css */
+@keyframes slidein_css {
+    from{
+        width: 6%;
+    }
+
+    to{
+        width: 60%;
+    }
+}
+
+
+/* barra % javaScript */
+.move_java{
+    border-radius: 1rem;
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    animation-name: slidein_java; 
+    animation-duration:  10s;
+    animation-fill-mode:  forwards;
+}
+/* animacion barra % javaScript */
+@keyframes slidein_java {
+    from{
+        width: 6%;
+    }
+
+    to{
+        width: 40%;
+    }
+}
+
+/* barra % sass */
+.move_sass{
+    border-radius: 1rem;
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    animation-name: slidein_sass; 
+    animation-duration:  10s;
+    animation-fill-mode:  forwards;
+}
+/* animacion barra % javaScript */
+@keyframes slidein_sass {
+    from{
+        width: 6%;
+    }
+
+    to{
+        width: 40%;
+    }
+}
+
+/* barra % tailwind */
+.move_tailwind{
+    border-radius: 1rem;
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    animation-name: slidein_tailwind; 
+    animation-duration:  10s;
+    animation-fill-mode:  forwards;
+}
+/* animacion barra % tailwind */ 
+@keyframes slidein_tailwind {
+    from{
+        width: 6%;
+    }
+
+    to{
+        width: 55%;
+    }
+}
+
+
+
