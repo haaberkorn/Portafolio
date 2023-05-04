@@ -8,6 +8,7 @@ const mover1 = document.getElementById("prueba1");
 let hora = document.getElementById("hora");
 
 
+
 //Se utilizo un evento para al darle click oculte el menu, muestre la lista y muestra la x
 boton.addEventListener("click", () => {
     menu.classList.toggle("hidden");
@@ -42,3 +43,23 @@ setInterval(
 );
 
 
+
+
+
+
+let textoCorreo = document.getElementById("correo").value;
+const emailRegex = /\w+\@\w{2,12}\.com/gi;
+
+
+
+
+textoCorreo.addEventListener("keypress", () =>{
+let vuelta = textoCorreo.test(emailRegex)
+    if(emailRegex = true){
+        console.log("son iguales");
+    }else{
+        console.log("no son iguales");
+    }
+
+})
+/*  console.log(parrafo.match(emailRegex)); */
