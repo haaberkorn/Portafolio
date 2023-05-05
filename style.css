@@ -143,8 +143,15 @@
     }
 }
 
+.spanOculto{
+    display: none;
+    color: red;
+}
 
-
+.error{
+    border: solid black;
+    box-shadow: 0 0 10px black;
+}
 /* .formularioParrafo{
     display: none;
 } */

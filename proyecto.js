@@ -2,12 +2,9 @@
 const boton = document.getElementById("botonNav");
 const equis = document.getElementById("xsNav");
 const menu = document.getElementById("liNav");
-const mover = document.getElementById("prueba");
-const mover1 = document.getElementById("prueba1");
-
+/* const mover = document.getElementById("prueba");
+const mover1 = document.getElementById("prueba1"); */
 let hora = document.getElementById("hora");
-
-
 
 //Se utilizo un evento para al darle click oculte el menu, muestre la lista y muestra la x
 boton.addEventListener("click", () => {
@@ -45,21 +42,18 @@ setInterval(
 
 
 
+let correo = document.getElementById("correo");
 
-
-let textoCorreo = document.getElementById("correo").value;
-const emailRegex = /\w+\@\w{2,12}\.com/gi;
-
-
-
-
-textoCorreo.addEventListener("keypress", () =>{
-let vuelta = textoCorreo.test(emailRegex)
-    if(emailRegex = true){
-        console.log("son iguales");
+correo.addEventListener("blur", () => {
+    /* Obteniendo los valores ingresado en la casilla de correo */
+    let valorCorreo = correo.value;
+    /* Selecionando el id del contenedor de correo */
+    let caja = document.getElementById("spanOculto")
+    if(valorCorreo.length === 0){
+        correo.classList.add("error")
+        caja.style.display = "block";
+        caja.innerText = "Aqui va el error"
     }else{
-        console.log("no son iguales");
+        alert("vas bien");
     }
-
 })
-/*  console.log(parrafo.match(emailRegex)); */
