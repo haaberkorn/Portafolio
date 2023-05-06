@@ -42,18 +42,56 @@ setInterval(
 
 
 
-let correo = document.getElementById("correo");
+
+
+
+
+nombre.addEventListener("blur", () => {
+    let nombre = document.getElementById("nombre");
+    /* Obteniendo los valores ingresado en la casilla de correo */
+    let valorNombre = nombre.value;
+    /* Selecionando el id del contenedor de correo */
+    let cajaName = document.getElementById("spanName")
+    if(valorNombre.length === 0){
+        nombre.classList.add("error")
+        cajaName.style.display = "block";
+        cajaName.innerText = "Aqui va el error"
+    }else{
+        cajaName.style.display = "none";
+        
+    }
+})
+
+apellido.addEventListener("blur", () => {
+    let apellido = document.getElementById("apellido");
+    /* Obteniendo los valores ingresado en la casilla de correo */
+    let valorApellido = apellido.value;
+    /* Selecionando el id del contenedor de correo */
+    let cajaApellido = document.getElementById("spanApellido")
+    if(valorApellido.length === 0){
+        apellido.classList.add("error")
+        cajaApellido.style.display = "block";
+        cajaApellido.innerText = "Aqui va el error"
+    }else{
+        cajaApellido.style.display = "none";
+        
+    }
+})
+
 
 correo.addEventListener("blur", () => {
+    let correo = document.getElementById("correo");
     /* Obteniendo los valores ingresado en la casilla de correo */
     let valorCorreo = correo.value;
     /* Selecionando el id del contenedor de correo */
-    let caja = document.getElementById("spanOculto")
+    let caja = document.getElementById("spanCorreo")
     if(valorCorreo.length === 0){
         correo.classList.add("error")
         caja.style.display = "block";
         caja.innerText = "Aqui va el error"
     }else{
-        alert("vas bien");
+        caja.style.display = "none";
+        
     }
 })
+

@@ -143,15 +143,29 @@
     }
 }
 
-.spanOculto{
+#spanCorreo{
     display: none;
     color: red;
 }
 
+#spanName{
+    display: none;
+    color: red;
+}
+
+#spanApellido{
+    display: none;
+    color: red;
+}
 .error{
     border: solid black;
     box-shadow: 0 0 10px black;
 }
+
+/* .error2{
+    border: solid black;
+    box-shadow: 0 0 10px black;
+} */
 /* .formularioParrafo{
     display: none;
 } */

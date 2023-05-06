@@ -36,25 +36,27 @@
         </header>
         <main>
             <section class="flex">
-                <form id="formulario" name="formulario">
+                <form >
                     <div class="flex flex-col">
-                        <input type="text" placeholder="Nombre">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <span id="spanName" class="spanName"></span>
                     </div>
                     <div>
-                        <input type="text" placeholder="Apellido">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                        <span  class="spanApellido"></span>
                     </div>
                     <div>
-                        <input type="email" id="correo" name="correoName" placeholder="Correo electronico">
+                        <input type="email" id="correo" name="correo" placeholder="Correo electronico">
+                        <span id="spanCorreo" ></span>
+                    </div>
+<!--                     <div>
+                        <input type="number" id="numero" name="numero" placeholder="Telefono">
                         <span id="spanOculto" class="spanOculto"></span>
-                    </div>
-                    <div>
-                        <input type="number" placeholder="Telefono">
-                        
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Asunto">
-                        
-                    </div>
+                    </div> -->
+<!--                     <div>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto">
+                        <span id="spanOculto" class="spanOculto"></span>
+                    </div> -->
                 </form>
             </section>
         </main>
