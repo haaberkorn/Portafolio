@@ -157,6 +157,16 @@
     display: none;
     color: red;
 }
+
+#spanNumero{
+    display: none;
+    color: red;
+}
+
+#spanAsunto{
+    display: none;
+    color: red;
+}
 .error{
     border: solid black;
     box-shadow: 0 0 10px black;

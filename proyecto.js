@@ -41,11 +41,6 @@ setInterval(
 
 
 
-
-
-
-
-
 nombre.addEventListener("blur", () => {
     let nombre = document.getElementById("nombre");
     /* Obteniendo los valores ingresado en la casilla de correo */
@@ -55,7 +50,7 @@ nombre.addEventListener("blur", () => {
     if(valorNombre.length === 0){
         nombre.classList.add("error")
         cajaName.style.display = "block";
-        cajaName.innerText = "Aqui va el error"
+        cajaName.innerText = `aqui va tu ${nombre.name}`
     }else{
         cajaName.style.display = "none";
         
@@ -71,7 +66,7 @@ apellido.addEventListener("blur", () => {
     if(valorApellido.length === 0){
         apellido.classList.add("error")
         cajaApellido.style.display = "block";
-        cajaApellido.innerText = "Aqui va el error"
+        cajaApellido.innerText = `aqui va tu ${apellido.name}`
     }else{
         cajaApellido.style.display = "none";
         
@@ -88,10 +83,41 @@ correo.addEventListener("blur", () => {
     if(valorCorreo.length === 0){
         correo.classList.add("error")
         caja.style.display = "block";
-        caja.innerText = "Aqui va el error"
+        caja.innerText = `aqui va tu ${correo.name}`
     }else{
         caja.style.display = "none";
         
     }
 })
 
+numero.addEventListener("blur", () => {
+    let numero = document.getElementById("numero");
+    /* Obteniendo los valores ingresado en la casilla de numero */
+    let valorNumero = numero.value;
+    /* Selecionando el id del contenedor de numero */
+    let caja = document.getElementById("spanNumero")
+    if(valorNumero.length === 0){
+        numero.classList.add("error")
+        caja.style.display = "block";
+        caja.innerText = `aqui va tu ${numero.name}`
+    }else{
+        caja.style.display = "none";
+        
+    }
+})
+
+asunto.addEventListener("blur", () => {
+    let asunto = document.getElementById("asunto");
+    /* Obteniendo los valores ingresado en la casilla de asunto */
+    let valorAsunto = asunto.value;
+    /* Selecionando el id del contenedor de asunto */
+    let caja = document.getElementById("spanAsunto")
+    if(valorAsunto.length === 0){
+        asunto.classList.add("error")
+        caja.style.display = "block";
+        caja.innerText = `aqui va tu ${asunto.name}`
+    }else{
+        caja.style.display = "none";
+        
+    }
+})
