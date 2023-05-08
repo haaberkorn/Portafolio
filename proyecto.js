@@ -164,14 +164,19 @@ const validarAsunto = () =>{
 }
 asunto.addEventListener("input",validarAsunto )
 
+
+
  const validarBoton = () =>{
+    let nombre = document.getElementById("nombre");
+    let apellido = document.getElementById("apellido");
+    let correo = document.getElementById("correo");
+    let numero = document.getElementById("numero");
+    let asunto = document.getElementById("asunto");
     /* let caja = document.getElementById("spanBoton") */
-    if(validarNombre()){
-        /* caja.style.display = "block";
-        caja.innerText = `Formulario enviado` */
+    if(regexNombre.test(nombre.value) && regexApellido.test(apellido.value) && regexCorreo.test(correo.value) && regexNumero.test(numero.value) && regexAsunto.test(correo.value)) {
         console.log("el mensaje se envio")
     }else{
         console.log("El mensaje no se envio")
     }
 }
-botonEnviar.addEventListener("submit", validarBoton) 
+botonEnviar.addEventListener("click", validarBoton) 
