@@ -147,7 +147,8 @@
 #spanApellido,
 #spanCorreo,
 #spanNumero,
-#spanAsunto{
+#spanAsunto
+#spanBoton{
     display: none;
     color: red;
 }
@@ -157,7 +158,8 @@
 .errorNombre,
 .errorApellido,
 .errorNumero,
-.errorAsunto{
+.errorAsunto,
+.validarBoton{
     border: solid red;
     box-shadow: 0 0 10px red;
 }
@@ -166,7 +168,8 @@
 .rightNombre,
 .rightApellido,
 .rightNumero,
-.rightAsunto{
+.rightAsunto,
+.validadBoton{
     border: solid rgb(0, 128, 9);
     box-shadow: 0 0 10px green;
 }

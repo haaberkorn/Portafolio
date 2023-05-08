@@ -2,6 +2,14 @@
 const boton = document.getElementById("botonNav");
 const equis = document.getElementById("xsNav");
 const menu = document.getElementById("liNav");
+const botonEnviar = document.getElementById("boton");
+const regexNombre = new RegExp(/^[A-Za-z]{3,10}$/);
+const regexApellido = new RegExp(/^[A-Za-z]{3,10}$/);
+const regexCorreo = new RegExp(/^\w+@\w+[A-Za-z]{4,7}\.[a-zA-Z]{2,3}$/);
+const regexNumero = new RegExp(/^\d{2,20}$/);
+const regexAsunto = new RegExp(/^(\w+\s){0,100}\w+$/);
+
+
 /* const mover = document.getElementById("prueba");
 const mover1 = document.getElementById("prueba1"); */
 let hora = document.getElementById("hora");
@@ -11,7 +19,6 @@ boton.addEventListener("click", () => {
     menu.classList.toggle("hidden");
     boton.classList.toggle("hidden");
     equis.classList.toggle("hidden");
-
 })
 
 //Se utilizo un evento para al darle click oculte la x, oculte la lista y muestra el menu
@@ -40,43 +47,44 @@ setInterval(
 );
 
 const validarNombre = () =>{
-    const regex = new RegExp(/^[A-Za-z]{3,10}$/);
     let nombre = document.getElementById("nombre");
     /* Obteniendo los valores ingresado en la casilla de nombre */
-   /*  console.log(regex.test(nombre.value)); */
+   /*  console.log(regexNombre.test(nombre.value)); */
     let valorNombre = nombre.value;
     /* Selecionando el id del contenedor de nombre */
     let caja = document.getElementById("spanNombre")
-    if(valorNombre.trim().length >= 2 && !regex.test(valorNombre)){
+    if(valorNombre.trim().length >= 2 && !regexNombre.test(valorNombre)){
         nombre.classList.add("errorNombre")
         nombre.classList.remove("rightNombre");
         caja.style.display = "block";
         caja.innerText = `Porfavor ingresar un nombre (solo palabras), sin espacio al final del mismo`
-    }else if(regex.test(valorNombre)){
+        
+    }else if(regexNombre.test(valorNombre)){
         nombre.classList.remove("errorNombre");
         nombre.classList.add("rightNombre");
         caja.style.display = "none";
+        
     }else{
         caja.style.display = "block";
+       
     }
    
 }
 nombre.addEventListener("input",validarNombre )
 
 const validarApellido = () =>{
-    const regex = new RegExp(/^[A-Za-z]{3,10}$/);
     let apellido = document.getElementById("apellido");
     /* Obteniendo los valores ingresado en la casilla de apellido */
-   /*  console.log(regex.test(apellido.value)); */
+   /*  console.log(regexApellido.test(apellido.value)); */
     let valorApellido = apellido.value;
     /* Selecionando el id del contenedor de apellido */
     let caja = document.getElementById("spanApellido")
-    if(valorApellido.trim().length >= 2 && !regex.test(valorApellido)){
+    if(valorApellido.trim().length >= 2 && !regexApellido.test(valorApellido)){
         apellido.classList.add("errorApellido")
         apellido.classList.remove("rightApellido");
         caja.style.display = "block";
         caja.innerText = `Porfavor ingresar un Apellido (solo palabras), sin espacio al final del mismo`
-    }else if(regex.test(valorApellido)){
+    }else if(regexApellido.test(valorApellido)){
         apellido.classList.remove("errorApellido");
         apellido.classList.add("rightApellido");
         caja.style.display = "none";
@@ -89,19 +97,18 @@ apellido.addEventListener("input",validarApellido )
 
 
 const validarCorreo = () =>{
-    const regex = new RegExp(/^\w+@\w+[A-Za-z]{4,7}\.[a-zA-Z]{2,3}$/);
     let correo = document.getElementById("correo");
     /* Obteniendo los valores ingresado en la casilla de correo */
-   /*  console.log(regex.test(correo.value)); */
+   /*  console.log(regexCorreo.test(correo.value)); */
     let valorCorreo = correo.value;
     /* Selecionando el id del contenedor de correo */
     let caja = document.getElementById("spanCorreo")
-    if(valorCorreo.trim().length > 5 && !regex.test(valorCorreo)){
+    if(valorCorreo.trim().length > 5 && !regexCorreo.test(valorCorreo)){
         correo.classList.add("error")
         correo.classList.remove("right");
         caja.style.display = "block";
         caja.innerText = `Por favor ingresar un correo valido`
-    }else if(regex.test(valorCorreo)){
+    }else if(regexCorreo.test(valorCorreo)){
         correo.classList.remove("error");
         correo.classList.add("right");
         caja.style.display = "none";
@@ -112,46 +119,41 @@ const validarCorreo = () =>{
 }
 correo.addEventListener("input",validarCorreo )
 
-
 const validarNumero = () =>{
-    const regex = new RegExp(/^\d{2,20}$/);
     let numero = document.getElementById("numero");
     /* Obteniendo los valores ingresado en la casilla de correo */
-   /*  console.log(regex.test(correo.value)); */
+   /*  console.log(regexNumero.test(correo.value)); */
     let valorNumero = numero.value;
     /* Selecionando el id del contenedor de correo */
     let caja = document.getElementById("spanNumero")
-    if(valorNumero.trim().length >= 1 && !regex.test(valorNumero)){
+    if(valorNumero.trim().length >= 1 && !regexNumero.test(valorNumero)){
         numero.classList.add("errorNumero");
         numero.classList.remove("rightNumero");
         caja.style.display = "block";
         caja.innerText = `Por favor ingresar un numero de telefono sin espacio`
-    }else if(regex.test(valorNumero)){
+    }else if(regexNumero.test(valorNumero)){
         numero.classList.remove("errorNumero");
         numero.classList.add("rightNumero");
         caja.style.display = "none";
     }else{
         caja.style.display = "block";
     }
-   
 }
-
 numero.addEventListener("input",validarNumero )
 
 const validarAsunto = () =>{
-    const regex = new RegExp(/^(\w+\s){0,100}\w+$/);
     let asunto = document.getElementById("asunto");
     /* Obteniendo los valores ingresado en la casilla de asunto */
-   /*  console.log(regex.test(asunto.value)); */
+   /*  console.log(regexAsunto.test(asunto.value)); */
     let valorAsunto = asunto.value;
     /* Selecionando el id del contenedor de asunto */
     let caja = document.getElementById("spanAsunto")
-    if(valorAsunto.trim().length >=0  && !regex.test(valorAsunto)){
+    if(valorAsunto.trim().length >=0  && !regexAsunto.test(valorAsunto)){
         asunto.classList.add("errorAsunto")
         asunto.classList.remove("rightAsunto");
         caja.style.display = "block";
         caja.innerText = `Por favor ingresar un texto sin espacio al final`
-    }else if(regex.test(valorAsunto)){
+    }else if(regexAsunto.test(valorAsunto)){
         asunto.classList.remove("errorAsunto");
         asunto.classList.add("rightAsunto");
         caja.style.display = "none";
@@ -161,3 +163,15 @@ const validarAsunto = () =>{
    
 }
 asunto.addEventListener("input",validarAsunto )
+
+ const validarBoton = () =>{
+    /* let caja = document.getElementById("spanBoton") */
+    if(validarNombre()){
+        /* caja.style.display = "block";
+        caja.innerText = `Formulario enviado` */
+        console.log("el mensaje se envio")
+    }else{
+        console.log("El mensaje no se envio")
+    }
+}
+botonEnviar.addEventListener("submit", validarBoton) 
