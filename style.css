@@ -143,39 +143,34 @@
     }
 }
 
-#spanCorreo{
-    display: none;
-    color: red;
-}
-
-#spanName{
-    display: none;
-    color: red;
-}
-
-#spanApellido{
-    display: none;
-    color: red;
-}
-
-#spanNumero{
-    display: none;
-    color: red;
-}
-
+#spanNombre,
+#spanApellido,
+#spanCorreo,
+#spanNumero,
 #spanAsunto{
     display: none;
     color: red;
 }
-.error{
-    border: solid black;
-    box-shadow: 0 0 10px black;
+
+
+.error,
+.errorNombre,
+.errorApellido,
+.errorNumero,
+.errorAsunto{
+    border: solid red;
+    box-shadow: 0 0 10px red;
 }
 
-/* .error2{
-    border: solid black;
-    box-shadow: 0 0 10px black;
-} */
-/* .formularioParrafo{
-    display: none;
-} */
+.right,
+.rightNombre,
+.rightApellido,
+.rightNumero,
+.rightAsunto{
+    border: solid rgb(0, 128, 9);
+    box-shadow: 0 0 10px green;
+}
+
+input:focus {
+    outline: none;
+  }

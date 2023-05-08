@@ -39,85 +39,125 @@ setInterval(
     },1000
 );
 
-
-
-nombre.addEventListener("blur", () => {
+const validarNombre = () =>{
+    const regex = new RegExp(/^[A-Za-z]{3,10}$/);
     let nombre = document.getElementById("nombre");
-    /* Obteniendo los valores ingresado en la casilla de correo */
+    /* Obteniendo los valores ingresado en la casilla de nombre */
+   /*  console.log(regex.test(nombre.value)); */
     let valorNombre = nombre.value;
-    /* Selecionando el id del contenedor de correo */
-    let cajaName = document.getElementById("spanName")
-    if(valorNombre.length === 0){
-        nombre.classList.add("error")
-        cajaName.style.display = "block";
-        cajaName.innerText = `aqui va tu ${nombre.name}`
+    /* Selecionando el id del contenedor de nombre */
+    let caja = document.getElementById("spanNombre")
+    if(valorNombre.trim().length >= 2 && !regex.test(valorNombre)){
+        nombre.classList.add("errorNombre")
+        nombre.classList.remove("rightNombre");
+        caja.style.display = "block";
+        caja.innerText = `Porfavor ingresar un nombre (solo palabras), sin espacio al final del mismo`
+    }else if(regex.test(valorNombre)){
+        nombre.classList.remove("errorNombre");
+        nombre.classList.add("rightNombre");
+        caja.style.display = "none";
     }else{
-        cajaName.style.display = "none";
-        
+        caja.style.display = "block";
     }
-})
+   
+}
+nombre.addEventListener("input",validarNombre )
 
-apellido.addEventListener("blur", () => {
+const validarApellido = () =>{
+    const regex = new RegExp(/^[A-Za-z]{3,10}$/);
     let apellido = document.getElementById("apellido");
-    /* Obteniendo los valores ingresado en la casilla de correo */
+    /* Obteniendo los valores ingresado en la casilla de apellido */
+   /*  console.log(regex.test(apellido.value)); */
     let valorApellido = apellido.value;
-    /* Selecionando el id del contenedor de correo */
-    let cajaApellido = document.getElementById("spanApellido")
-    if(valorApellido.length === 0){
-        apellido.classList.add("error")
-        cajaApellido.style.display = "block";
-        cajaApellido.innerText = `aqui va tu ${apellido.name}`
+    /* Selecionando el id del contenedor de apellido */
+    let caja = document.getElementById("spanApellido")
+    if(valorApellido.trim().length >= 2 && !regex.test(valorApellido)){
+        apellido.classList.add("errorApellido")
+        apellido.classList.remove("rightApellido");
+        caja.style.display = "block";
+        caja.innerText = `Porfavor ingresar un Apellido (solo palabras), sin espacio al final del mismo`
+    }else if(regex.test(valorApellido)){
+        apellido.classList.remove("errorApellido");
+        apellido.classList.add("rightApellido");
+        caja.style.display = "none";
     }else{
-        cajaApellido.style.display = "none";
-        
+        caja.style.display = "block";
     }
-})
+   
+}
+apellido.addEventListener("input",validarApellido )
 
 
-correo.addEventListener("blur", () => {
+const validarCorreo = () =>{
+    const regex = new RegExp(/^\w+@\w+[A-Za-z]{4,7}\.[a-zA-Z]{2,3}$/);
     let correo = document.getElementById("correo");
     /* Obteniendo los valores ingresado en la casilla de correo */
+   /*  console.log(regex.test(correo.value)); */
     let valorCorreo = correo.value;
     /* Selecionando el id del contenedor de correo */
     let caja = document.getElementById("spanCorreo")
-    if(valorCorreo.length === 0){
+    if(valorCorreo.trim().length > 5 && !regex.test(valorCorreo)){
         correo.classList.add("error")
+        correo.classList.remove("right");
         caja.style.display = "block";
-        caja.innerText = `aqui va tu ${correo.name}`
-    }else{
+        caja.innerText = `Por favor ingresar un correo valido`
+    }else if(regex.test(valorCorreo)){
+        correo.classList.remove("error");
+        correo.classList.add("right");
         caja.style.display = "none";
-        
+    }else{
+        caja.style.display = "block";
     }
-})
+   
+}
+correo.addEventListener("input",validarCorreo )
 
-numero.addEventListener("blur", () => {
+
+const validarNumero = () =>{
+    const regex = new RegExp(/^\d{2,20}$/);
     let numero = document.getElementById("numero");
-    /* Obteniendo los valores ingresado en la casilla de numero */
+    /* Obteniendo los valores ingresado en la casilla de correo */
+   /*  console.log(regex.test(correo.value)); */
     let valorNumero = numero.value;
-    /* Selecionando el id del contenedor de numero */
+    /* Selecionando el id del contenedor de correo */
     let caja = document.getElementById("spanNumero")
-    if(valorNumero.length === 0){
-        numero.classList.add("error")
+    if(valorNumero.trim().length >= 1 && !regex.test(valorNumero)){
+        numero.classList.add("errorNumero");
+        numero.classList.remove("rightNumero");
         caja.style.display = "block";
-        caja.innerText = `aqui va tu ${numero.name}`
-    }else{
+        caja.innerText = `Por favor ingresar un numero de telefono sin espacio`
+    }else if(regex.test(valorNumero)){
+        numero.classList.remove("errorNumero");
+        numero.classList.add("rightNumero");
         caja.style.display = "none";
-        
+    }else{
+        caja.style.display = "block";
     }
-})
+   
+}
 
-asunto.addEventListener("blur", () => {
+numero.addEventListener("input",validarNumero )
+
+const validarAsunto = () =>{
+    const regex = new RegExp(/^(\w+\s){0,100}\w+$/);
     let asunto = document.getElementById("asunto");
     /* Obteniendo los valores ingresado en la casilla de asunto */
+   /*  console.log(regex.test(asunto.value)); */
     let valorAsunto = asunto.value;
     /* Selecionando el id del contenedor de asunto */
     let caja = document.getElementById("spanAsunto")
-    if(valorAsunto.length === 0){
-        asunto.classList.add("error")
+    if(valorAsunto.trim().length >=0  && !regex.test(valorAsunto)){
+        asunto.classList.add("errorAsunto")
+        asunto.classList.remove("rightAsunto");
         caja.style.display = "block";
-        caja.innerText = `aqui va tu ${asunto.name}`
-    }else{
+        caja.innerText = `Por favor ingresar un texto sin espacio al final`
+    }else if(regex.test(valorAsunto)){
+        asunto.classList.remove("errorAsunto");
+        asunto.classList.add("rightAsunto");
         caja.style.display = "none";
-        
+    }else{
+        caja.style.display = "block";
     }
-})
+   
+}
+asunto.addEventListener("input",validarAsunto )

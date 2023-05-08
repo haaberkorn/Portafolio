@@ -10,7 +10,7 @@
     <title>Portafolio</title>
 <body>
         <!-- barra navegacion -->
-        <header>
+        <header class="mb-[1rem]">
             <nav class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
                 <div class="flex text-2xl  sm:flex">
                     <h1 id="hora">
@@ -35,28 +35,29 @@
             </nav>
         </header>
         <main>
-            <section class="flex">
-                <form>
+            <section class="flex justify-center">
+                <form class="flex flex-col gap-2">
                     <div class="flex flex-col">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        <span id="spanName" class="spanName"></span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="rounded-md border-2 rounded-md">
+                        <span id="spanNombre"></span>
                     </div>
                     <div class="flex flex-col">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="rounded-md border-2 rounded-md">
                         <span  id="spanApellido"></span>
                     </div>
                     <div class="flex flex-col">
-                        <input type="email" id="correo" name="correo" placeholder="Correo electronico">
+                        <input type="email" id="correo" name="correo" placeholder="Correo electronico" class="rounded-md border-2 rounded-md">
                         <span id="spanCorreo" ></span>
                     </div>
                     <div class="flex flex-col" >
-                        <input type="number" id="numero" name="numero" placeholder="Telefono">
+                        <input type="text" id="numero" name="numero" placeholder="Telefono" class="rounded-md border-2 rounded-md">
                         <span id="spanNumero"></span>
                     </div>
                     <div>
-                        <input type="text" id="asunto" name="asunto" placeholder="Asunto">
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto" class="rounded-md border-2 rounded-md">
                         <span id="spanAsunto"></span>
                     </div>
+                    <button id="boton" class="rounded-md border-2 rounded-md">Enviar</button>
                 </form>
             </section>
         </main>
