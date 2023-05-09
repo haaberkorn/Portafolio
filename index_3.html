@@ -10,7 +10,7 @@
     <title>Portafolio</title>
 <body>
         <!-- barra navegacion -->
-        <header class="mb-[1rem]">
+        <header class="mb-[1rem] bg-[#FFEBEB] h-[10vh]">
             <nav class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
                 <div class="flex text-2xl  sm:flex">
                     <h1 id="hora">
@@ -18,7 +18,7 @@
                     </h1>
                 </div>
                 <div class="flex">
-                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-white sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
                         <a href="./index.html">Inicio</a>
                         <a href="./index_2.html">Proyectos</a>
                         <a href="./index_3.html">Contacto</a>
@@ -34,43 +34,51 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <section class="flex justify-center">
-                <form class="flex flex-col gap-2">
+        <main class="h-[63vh] flex flex-col justify-center items-center pt-[5rem]">
+            <h1 class="pb-[2rem]">Contacto</h1>
+            <section class="flex">
+                <!-- formulario -->
+                <form id="formulario" class="flex flex-col justify-center gap-2">
+                    <!-- input nombre -->
                     <div class="flex flex-col w-[320px]">
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="rounded-md border-2 rounded-md ">
                         <span id="spanNombre"></span>
                     </div>
-                    <div class="flex flex-col">
+                    <!-- input apellido -->
+                    <div class="flex flex-col w-[320px] ">
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="rounded-md border-2 rounded-md ">
                         <span  id="spanApellido"></span>
                     </div>
-                    <div class="flex flex-col">
+                    <!-- input correo -->
+                    <div class="flex flex-col w-[320px] ">
                         <input type="email" id="correo" name="correo" placeholder="Correo electronico" class="rounded-md border-2 rounded-md">
                         <span id="spanCorreo" ></span>
                     </div>
-                    <div class="flex flex-col" >
+                    <!-- input numero -->
+                    <div class="flex flex-col w-[320px]">
                         <input type="text" id="numero" name="numero" placeholder="Telefono" class="rounded-md border-2 rounded-md">
                         <span id="spanNumero"></span>
                     </div>
+                    <!-- input asunto -->
                     <div>
                         <input type="text" id="asunto" name="asunto" placeholder="Asunto" class="rounded-md border-2 rounded-md w-[320px] h-[120px]">
                         <span id="spanAsunto"></span>
                     </div>
-                    <div>
-                        <button id="boton" class="rounded-md border-2 rounded-md">Enviar</button>
-                        <span id="spanBoton" ></span>
+                    <!-- boton de enviar formulario -->
+                    <div class="flex flex-col gap-2 w-[120px] ">
+                        <button  id="botonEnviar" class="rounded-md border-2 rounded-md">Enviar</button>
+                        <span id="spanBoton" class="w-[320px]" ></span>
                     </div>
                 </form>
             </section>
         </main>
-        <footer class="flex flex-col mt-[7rem]  shadow-inner shadow-slate-300">
-            <figure class="flex h-[100px] w-[200px] ">
+        <footer class="flex flex-col mt-[7rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB]">
+<!--             <figure class="flex h-[100px] w-[200px] ">
                 <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
-            </figure>
-            <div class="flex flex-col items-center gap-2 text-[1rem] mt-[2rem] ">    
+            </figure> -->
+            <div class="flex flex-col items-center gap-2 text-[1rem]">    
                 <div class="flex">
-                    <ul class="flex flex-col items-center gap-3 px-2">
+                    <ul class="flex  items-center gap-5 px-2">
                         <a href="./index.html">Inicio</a>
                         <a href="./index_2.html">Proyectos</a>
                         <a href="./index_3.html">Contacto</a>

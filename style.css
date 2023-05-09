@@ -1,3 +1,10 @@
+/* .header{
+    background: linear-gradient(#EB455F,#FF6969);
+}
+ */
+
+
+
 /* Foto de perfil */
 .perfil{
     transform: translatey(0px);
@@ -28,7 +35,8 @@
 .container{
     display: flex;
     color: rgb(14,13,13);
-    max-width: 320px;
+    /* max-width: 320px; */
+    
     height: 20px;
     border: solid;
     border-radius: 1rem;
@@ -159,7 +167,7 @@
 .errorApellido,
 .errorNumero,
 .errorAsunto,
-.validarBoton{
+.errorBoton{
     border: solid red;
     box-shadow: 0 0 10px red;
 }
@@ -169,7 +177,7 @@
 .rightApellido,
 .rightNumero,
 .rightAsunto,
-.validadBoton{
+.rightBoton{
     border: solid rgb(0, 128, 9);
     box-shadow: 0 0 10px green;
 }

@@ -2,7 +2,7 @@
 const boton = document.getElementById("botonNav");
 const equis = document.getElementById("xsNav");
 const menu = document.getElementById("liNav");
-const botonEnviar = document.getElementById("boton");
+const formulario = document.getElementById("formulario");
 const regexNombre = new RegExp(/^[A-Za-z]{3,10}$/);
 const regexApellido = new RegExp(/^[A-Za-z]{3,10}$/);
 const regexCorreo = new RegExp(/^\w+@\w+[A-Za-z]{4,7}\.[a-zA-Z]{2,3}$/);
@@ -166,17 +166,30 @@ asunto.addEventListener("input",validarAsunto )
 
 
 
- const validarBoton = () =>{
+ const validarBoton = (e) =>{
+    e.preventDefault()
     let nombre = document.getElementById("nombre");
     let apellido = document.getElementById("apellido");
     let correo = document.getElementById("correo");
     let numero = document.getElementById("numero");
     let asunto = document.getElementById("asunto");
-    /* let caja = document.getElementById("spanBoton") */
-    if(regexNombre.test(nombre.value) && regexApellido.test(apellido.value) && regexCorreo.test(correo.value) && regexNumero.test(numero.value) && regexAsunto.test(correo.value)) {
-        console.log("el mensaje se envio")
+    let caja = document.getElementById("spanBoton");
+
+    if(regexNombre.test(nombre.value) && regexApellido.test(apellido.value) && regexCorreo.test(correo.value) && regexNumero.test(numero.value) && regexAsunto.test(asunto.value)) { 
+        nombre.value = "";
+        apellido.value = "";
+        correo.value = "";
+        numero.value = "";
+        asunto.value = "";
+        caja.classList.add("rightBoton");
+        caja.classList.remove("errorBoton"); 
+        caja.style.display = "block";
+        caja.innerText = `El mensaje se a enviado`
     }else{
-        console.log("El mensaje no se envio")
+        caja.classList.remove("rightBoton");
+        caja.classList.add("errorBoton");
+        caja.style.display = "block";
+        caja.innerText = `Complete todo los campos`
     }
 }
-botonEnviar.addEventListener("click", validarBoton) 
+formulario.addEventListener("submit", validarBoton) 

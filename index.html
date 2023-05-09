@@ -11,18 +11,18 @@
 </head>
 <body>
         <!-- barra navegacion -->
-        <header class="bg-[#E5F9DB]">
-            <nav class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
-                <div class="flex text-2xl  sm:flex">
-                    <h1 id="hora">
+        <header class="bg-[#FFEBEB]">
+            <nav class="flex justify-between   h-[10vh] sm:flex sm:justify-between sm:items-center ">
+                <div class="flex text-2xl sm:flex">
+                    <h1 id="hora" >
                         
                     </h1>
                 </div>
                 <div class="flex">
-                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-white sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
-                        <a href="./index.html">Inicio</a>
-                        <a href="./index_2.html">Proyectos</a>
-                        <a href="./index_3.html">Contacto</a>
+                    <ul id="liNav" class=" liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                        <a  href="./index.html">Inicio</a>
+                        <a  href="./index_2.html">Proyectos</a>
+                        <a  href="./index_3.html">Contacto</a>
                     </ul>
                         <div class="flex">
                             <button id="botonNav" class="flex mt-5 sm:hidden">
@@ -35,14 +35,17 @@
                 </div>
             </nav>
         </header>
-    <main">
-        <div class=" flex flex-col justify-center items-center mt-[5.5rem] gap-2">
+    <main class=" pt-[3rem]">
+        <div class=" flex flex-col justify-center items-center gap-2 md:flex">
             <!-- Imagen de perfil -->
-            <figure class="relative">
+        
+        <div class="flex flex-col items-center md:gap-[5rem] md:flex md:flex-row">    
+            <figure class="relative  ">
                 <img id="perfil" class="perfil relative w-[200px] h-[200px] box-border border-solid border-white  rounded-[50%] overflow-hidden shadow-lg shadow-slate-900 " src="./imagenes/una-taza-de-javascript.png" alt="">
             </figure>
             <!-- titulo con mi nombre -->
-            <div class="flex flex-col mt-3">
+        <div class="flex flex-col  items-center">
+            <div class="flex flex-col mt-3 ">
                 <h2 class="flex justify-center text-2xl">
                     Hola! Soy Keyner Luque 
                 <h2/>
@@ -50,7 +53,7 @@
                 <p class="flex justify-center text-2xl"> Web Developer</p>
             </div>
             <!-- iconos de las redes sociales -->
-            <div id="icono" class="flex gap-5">
+            <div id="icono" class="flex gap-5 ">
                 <figure>
                     <i class="fa-brands fa-instagram fa-fade"></i>
                 </figure>
@@ -68,9 +71,11 @@
                 </figure>
             </div>
         </div>
+        </div>
+  
         <!-- ACERCA DE MI -->
         <div>
-            <div class="flex justify-center shadow-md shadow-slate-200  text-black text-2xl mt-[5rem]">
+            <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl pt-[3rem]">
                 <h2>Acerca de mi</h2>
             </div>
 <!--             <div class="flex flex-col items-center mt-[3rem] ">
@@ -82,12 +87,14 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At tempore nemo laborum exercitationem, fugit rerum porro mollitia ut dolorum illum id voluptatibus voluptas sequi voluptate cumque quia, voluptatum doloremque est.</p>
             </div>
         </div>
+        </div>
+    </div>
         <!-- HOBBY -->
         <div>
-            <div class="flex justify-center shadow-md shadow-slate-200  text-black text-2xl mt-[1.5rem]">
+            <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl mt-[1.5rem]">
                 <h2>Hobby</h2>
             </div>
-            <div class="flex flex-col mt-[1.5rem] text-2xl items-center gap-[1.5rem]">
+            <div class="flex flex-wrap justify-center mt-[1.5rem] text-2xl items-center gap-[1.5rem] sm:flex sm:flex-row sm:justify-center sm:items-center sm:flex-wrap ">
                 <figure class="w-[100px]">
                     <img src="./imagenes/game-controller-outline.svg" alt="">
                 </figure>
@@ -103,13 +110,13 @@
             </div>
         </div>
     </main>
-    <footer class="flex flex-col mt-[7rem]  shadow-inner shadow-slate-300 bg-[#E5F9DB]">
-        <figure class="flex h-[100px] w-[200px] ">
+    <footer class="flex flex-col pt-[1rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB]">
+<!--         <figure class="flex h-[100px] w-[200px] ">
             <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
-        </figure>
-        <div class="flex flex-col items-center gap-2 text-[1rem] mt-[2rem] ">    
+        </figure> -->
+        <div class="flex flex-col items-center gap-2 text-[1rem]  ">    
             <div class="flex">
-                <ul class="flex flex-col items-center gap-3 px-2">
+                <ul class="flex  items-center gap-3 px-2">
                     <a href="./index.html">Inicio</a>
                     <a href="./index_2.html">Proyectos</a>
                     <a href="./index_3.html">Contacto</a>

@@ -10,7 +10,7 @@
     <title>Portafolio</title>
 <body>
          <!-- barra navegacion -->
-         <header>
+         <header class="bg-[#FFEBEB]">
             <nav class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
                 <div class="flex text-2xl  sm:flex">
                     <h1 id="hora">
@@ -18,7 +18,7 @@
                     </h1>
                 </div>
                 <div class="flex">
-                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-white sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
                         <a href="./index.html">Inicio</a>
                         <a href="./index_2.html">Proyectos</a>
                         <a href="./index_3.html">Contacto</a>
@@ -43,7 +43,8 @@
         <div class="flex flex-col mt-[2rem] text-xl gap-1 items-center">
             <p>En esta parte  podras saber mas sobre los lenguajes que manejos, como las herramientas y los trabajos que e realizado hasta los momentos.</p>
         </div>
-        <div class="flex flex-col gap-10 mt-[2rem]">
+        <!-- contenedor de lenguajes aprendidos y herramientas -->
+        <div class="flex flex-col gap-10 pt-[2rem] md:flex md:flex-row md:justify-around ">
             <!-- lenguajes aprendidos -->
             <div class="flex flex-col gap-5">
                 <h2 class="text-xl">Lenguajes</h2>
@@ -52,9 +53,9 @@
                         <span>Html</span>
                         <span>50%</span>
                     </div>
-                    <div id="prueba1" class="container flex flex-col ">
+                    <div id="prueba1" class="container flex flex-col w-[100%] md:w-[200px]">
                         <div id="prueba" class="move">
-                            <p ></p>
+                            <p> </p>
                         </div>
                     </div>
                 </div>
@@ -108,21 +109,35 @@
                 </div>
             </div> 
         </div>
+        <!-- Proyectos -->
+        <p class="flex justify-center mt-[2rem]">Proyectos</p>
+        <div class="mt-[1rem] items-center flex flex-col gap-2 flex-wrap pb-[1rem]">
+            <figure class="min-w-[320px] max-w-[500px] flex items-center ">
+                <a href="https://haaberkorn.github.io/Youtube/"> 
+                    <img class="rounded-[2%]" src="./imagenes/cloneYoutube.jpg" alt="Proyecto de youtube"> 
+                </a>
+            </figure>
+            <figure class="min-w-[320px] max-w-[500px] flex items-center">
+                <a href="https://haaberkorn.github.io/Netflix_clone/">
+                    <img class="rounded-[2%]" src="./imagenes/cloneNetflix.jpg" alt="Proyecto de youtube">
+                </a>
+            </figure>
+        </div>
     </main>
-    <footer class="flex flex-col mt-[7rem]  bg-[rgb(85,85,85)] text-black ">
-        <figure class="flex h-[100px] w-[200px]">
-            <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
-        </figure>
-        <div class="flex flex-col items-center gap-2 text-[1rem] mt-[2rem]  text-white">    
+    <footer class="flex flex-col pt-[1rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB]">
+        <!--         <figure class="flex h-[100px] w-[200px] ">
+                    <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
+                </figure> -->
+        <div class="flex flex-col items-center gap-2 text-[1rem]  ">    
             <div class="flex">
-                <ul class="flex flex-col items-center gap-3 px-2">
+                <ul class="flex  items-center gap-3 px-2">
                     <a href="./index.html">Inicio</a>
                     <a href="./index_2.html">Proyectos</a>
                     <a href="./index_3.html">Contacto</a>
                 </ul>
             </div>
         </div>
-    </footer>   
+    </footer>      
 </body>
 <script src="./proyecto.js"></script>
 </html>
