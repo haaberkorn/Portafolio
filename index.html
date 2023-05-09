@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="./style.css">
     <title>Portafolio</title>
 </head>
-<body>
+<body class="h-[100vh]" >
         <!-- barra navegacion -->
-        <header class="bg-[#FFEBEB]">
+        <header class="bg-[#FFEBEB]" >
             <nav class="flex justify-between   h-[10vh] sm:flex sm:justify-between sm:items-center ">
-                <div class="flex text-2xl sm:flex">
+                <div class="flex text-2xl sm:flextail">
                     <h1 id="hora" >
                         
                     </h1>
                 </div>
-                <div class="flex">
-                    <ul id="liNav" class=" liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                <div class="flex items-baseline gap-[2rem]">
+                    <button id="botonOscuro" class="flex flex-col justify-center gap-2">
+                        <i class="fa-solid fa-moon fa-2xl"></i>
+                    </button>
+                    <ul id="liNav" class=" liNav_class z-50 top-[0.01%] left-[0.01%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
                         <a  href="./index.html">Inicio</a>
                         <a  href="./index_2.html">Proyectos</a>
                         <a  href="./index_3.html">Contacto</a>
                     </ul>
-                        <div class="flex">
+                        <div class="flex flex-col justify-center">
+    
                             <button id="botonNav" class="flex mt-5 sm:hidden">
                                 <i class="fa-solid fa-bars fa-2xl"></i>
                             </button>
@@ -35,95 +39,88 @@
                 </div>
             </nav>
         </header>
-    <main class=" pt-[3rem]">
-        <div class=" flex flex-col justify-center items-center gap-2 md:flex">
+<main class=" pt-[3rem]" >
+    <div class=" flex flex-col justify-center items-center gap-2 md:flex">
             <!-- Imagen de perfil -->
-        
         <div class="flex flex-col items-center md:gap-[5rem] md:flex md:flex-row">    
             <figure class="relative  ">
-                <img id="perfil" class="perfil relative w-[200px] h-[200px] box-border border-solid border-white  rounded-[50%] overflow-hidden shadow-lg shadow-slate-900 " src="./imagenes/una-taza-de-javascript.png" alt="">
+                <img id="perfil" class="perfil relative w-[200px] h-[200px] box-border border-solid border-white  rounded-[50%] overflow-hidden shadow-lg shadow-slate-900 " src="./imagenes/WhatsApp Image 2023-05-09 at 12.05.43.jpeg" alt="">
             </figure>
             <!-- titulo con mi nombre -->
-        <div class="flex flex-col  items-center">
-            <div class="flex flex-col mt-3 ">
-                <h2 class="flex justify-center text-2xl">
-                    Hola! Soy Keyner Luque 
-                <h2/>
-                <!-- parrafo de que soy -->
-                <p class="flex justify-center text-2xl"> Web Developer</p>
+            <div class="flex flex-col  items-center">
+                <div class="flex flex-col mt-3 ">
+                    <h2 class="flex justify-center text-2xl">
+                        Hola! Soy Keyner Luque 
+                    <h2/>
+                    <!-- parrafo de que soy -->
+                    <p class="flex justify-center text-2xl"> Web Developer</p>
+                </div>
+                <!-- iconos de las redes sociales -->
+                <div id="icono" class="flex gap-5 ">
+                    <figure>
+                        <i class="fa-brands fa-instagram fa-fade"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-brands fa-whatsapp fa-fade"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-brands fa-github fa-fade"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-brands fa-twitter fa-fade"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-brands fa-linkedin fa-fade"></i>
+                    </figure>
+                </div>
             </div>
-            <!-- iconos de las redes sociales -->
-            <div id="icono" class="flex gap-5 ">
-                <figure>
-                    <i class="fa-brands fa-instagram fa-fade"></i>
-                </figure>
-                <figure>
-                    <i class="fa-brands fa-whatsapp fa-fade"></i>
-                </figure>
-                <figure>
-                    <i class="fa-brands fa-github fa-fade"></i>
-                </figure>
-                <figure>
-                    <i class="fa-brands fa-twitter fa-fade"></i>
-                </figure>
-                <figure>
-                    <i class="fa-brands fa-linkedin fa-fade"></i>
-                </figure>
+        </div>
+        </div>
+            <!-- ACERCA DE MI -->
+            <div>
+                <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl pt-[3rem]">
+                    <h2>Acerca de mi</h2>
+                </div>
+                <div class="flex flex-col mt-[2rem] gap-1 items-center">
+                    <p>Soy ingeniero electronico y actualmente estudiante de programacion web, siempre me a interesado  el mundo de la tegnologia, poder crear cosas que puedan facilitar las tareas a las personas, esta es mi Web y aqui podras saber un poco mas de mi.</p>
+                </div>
             </div>
         </div>
         </div>
-  
-        <!-- ACERCA DE MI -->
-        <div>
-            <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl pt-[3rem]">
-                <h2>Acerca de mi</h2>
-            </div>
-<!--             <div class="flex flex-col items-center mt-[3rem] ">
-                <figure class="flex  w-[300px] ">
-                    <img src="./imagenes/undraw_hacker_mindset_re_8a33.svg" alt="Imagen acerca de mi ">
-                </figure>
-            </div> -->
-            <div class="flex flex-col mt-[2rem] gap-1 items-center">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At tempore nemo laborum exercitationem, fugit rerum porro mollitia ut dolorum illum id voluptatibus voluptas sequi voluptate cumque quia, voluptatum doloremque est.</p>
+            <!-- HOBBY -->
+            <div>
+                <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl mt-[1.5rem]">
+                    <h2>Hobby</h2>
+                </div>
+                <div class="flex flex-wrap justify-center mt-[1.5rem] text-2xl items-center gap-[1.5rem] sm:flex sm:flex-row sm:justify-center sm:items-center sm:flex-wrap ">
+                    <figure class="w-[100px]">
+                        <img src="./imagenes/game-controller-outline.svg" alt="">
+                    </figure>
+                    <figure class="w-[100px]">
+                        <img src="./imagenes/./motor-scooter.svg" alt="">
+                    </figure>
+                    <figure class="w-[100px]">
+                        <img src="./imagenes/./running.svg" alt="">
+                    </figure>
+                    <figure class="w-[100px]">
+                        <img src="./imagenes/cinema.svg" alt="">
+                    </figure>
+                </div>
             </div>
         </div>
+    </div>    
+</main>
+<footer class=" footer flex flex-col pt-[1rem] pt-[1.6rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB] md:mt[1.6rem]">
+    <div class="flex flex-col items-center gap-2 text-[1rem] ">    
+        <div class="flex">
+            <ul class="flex  items-center gap-3 px-2">
+                <a href="./index.html">Inicio</a>
+                <a href="./index_2.html">Proyectos</a>
+                <a href="./index_3.html">Contacto</a>
+            </ul>
         </div>
     </div>
-        <!-- HOBBY -->
-        <div>
-            <div class="flex justify-center shadow-md shadow-slate-100  text-black text-2xl mt-[1.5rem]">
-                <h2>Hobby</h2>
-            </div>
-            <div class="flex flex-wrap justify-center mt-[1.5rem] text-2xl items-center gap-[1.5rem] sm:flex sm:flex-row sm:justify-center sm:items-center sm:flex-wrap ">
-                <figure class="w-[100px]">
-                    <img src="./imagenes/game-controller-outline.svg" alt="">
-                </figure>
-                <figure class="w-[100px]">
-                    <img src="./imagenes/./motor-scooter.svg" alt="">
-                </figure>
-                <figure class="w-[100px]">
-                    <img src="./imagenes/./running.svg" alt="">
-                </figure>
-                <figure class="w-[100px]">
-                    <img src="./imagenes/cinema.svg" alt="">
-                </figure>
-            </div>
-        </div>
-    </main>
-    <footer class="flex flex-col pt-[1rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB]">
-<!--         <figure class="flex h-[100px] w-[200px] ">
-            <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
-        </figure> -->
-        <div class="flex flex-col items-center gap-2 text-[1rem]  ">    
-            <div class="flex">
-                <ul class="flex  items-center gap-3 px-2">
-                    <a href="./index.html">Inicio</a>
-                    <a href="./index_2.html">Proyectos</a>
-                    <a href="./index_3.html">Contacto</a>
-                </ul>
-            </div>
-        </div>
-    </footer>   
+</footer>   
 </body>
 <script src="./proyecto.js"></script>
 </html>

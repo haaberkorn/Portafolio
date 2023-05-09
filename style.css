@@ -3,7 +3,12 @@
 }
  */
 
-
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
 /* Foto de perfil */
 .perfil{
@@ -185,3 +190,19 @@
 input:focus {
     outline: none;
   }
+
+  /* modo oscuro */
+  .fondoOscuro{
+    background-color:rgb(31,39,48) ; 
+  }
+  .fondoClaro{
+    background-color: rgb(255,255,255);
+  }
+  
+  .negro{
+    color: black;
+  }
+  .blanco{
+    color: aliceblue;
+  }
+

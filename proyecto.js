@@ -2,23 +2,26 @@
 const boton = document.getElementById("botonNav");
 const equis = document.getElementById("xsNav");
 const menu = document.getElementById("liNav");
+
+
 const formulario = document.getElementById("formulario");
 const regexNombre = new RegExp(/^[A-Za-z]{3,10}$/);
 const regexApellido = new RegExp(/^[A-Za-z]{3,10}$/);
 const regexCorreo = new RegExp(/^\w+@\w+[A-Za-z]{4,7}\.[a-zA-Z]{2,3}$/);
 const regexNumero = new RegExp(/^\d{2,20}$/);
 const regexAsunto = new RegExp(/^(\w+\s){0,100}\w+$/);
+let hora = document.getElementById("hora");
 
 
 /* const mover = document.getElementById("prueba");
 const mover1 = document.getElementById("prueba1"); */
-let hora = document.getElementById("hora");
 
 //Se utilizo un evento para al darle click oculte el menu, muestre la lista y muestra la x
 boton.addEventListener("click", () => {
     menu.classList.toggle("hidden");
     boton.classList.toggle("hidden");
     equis.classList.toggle("hidden");
+    
 })
 
 //Se utilizo un evento para al darle click oculte la x, oculte la lista y muestra el menu
@@ -26,6 +29,7 @@ equis.addEventListener("click", () => {
     equis.classList.toggle("hidden");
     boton.classList.toggle("hidden");
     menu.classList.toggle("hidden");
+    console.log("no vez")
 })
 
 /* mover.addEventListener("click", ()=>{
@@ -45,6 +49,7 @@ setInterval(
         hora.innerText = tiempo.toLocaleTimeString();
     },1000
 );
+
 
 const validarNombre = () =>{
     let nombre = document.getElementById("nombre");
@@ -70,7 +75,7 @@ const validarNombre = () =>{
     }
    
 }
-nombre.addEventListener("input",validarNombre )
+nombre.addEventListener("input",validarNombre );
 
 const validarApellido = () =>{
     let apellido = document.getElementById("apellido");
@@ -192,4 +197,48 @@ asunto.addEventListener("input",validarAsunto )
         caja.innerText = `Complete todo los campos`
     }
 }
-formulario.addEventListener("submit", validarBoton) 
+formulario.addEventListener("submit", validarBoton) ;
+
+
+const botonOscuro = document.getElementById("botonOscuro");
+const botonClaro = document.getElementById("botonClaro");
+const modoOscuro = document.getElementById("modoOscuro");
+const cambiarColorOscuro = () =>{
+
+    let parrafoContacto = document.getElementById("parrafoContacto");
+    let hora = document.getElementById("hora");
+    let botonNav = document.getElementById("botonNav");
+    let botonxsNav = document.getElementById("xsNav");
+    let botonEnviar = document.getElementById("botonEnviar");
+    let footer = document.getElementById("footer");
+    let spanBoton = document.getElementById("spanBoton");
+
+    modoOscuro.classList.add("fondoOscuro");
+    parrafoContacto.classList.add("blanco");
+    hora.classList.add("blanco");
+    hora.classList.remove("negro")
+    botonNav.classList.add("blanco");
+    botonxsNav.classList.add("blanco");
+    botonEnviar.classList.add("blanco");
+    footer.classList.add("blanco");
+    
+    spanBoton.classList.add("blanco");
+    spanBoton.classList.remove("negro");
+
+    botonOscuro.classList.toggle("hidden");
+    botonClaro.classList.toggle("hidden");
+}
+
+botonOscuro.addEventListener("click",cambiarColorOscuro)
+
+const cambiarColorClaro = () => {
+    modoOscuro.classList.remove("fondoOscuro");
+
+
+    
+
+    botonOscuro.classList.toggle("hidden");
+    botonClaro.classList.toggle("hidden");
+}
+
+botonClaro.addEventListener("click",cambiarColorClaro);

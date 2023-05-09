@@ -8,20 +8,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Portafolio</title>
-<body>
+<body id="modoOscuro" >
         <!-- barra navegacion -->
-        <header class="mb-[1rem] bg-[#FFEBEB] h-[10vh]">
+        <header class="h-[18vh]">
             <nav class="flex justify-between  h-[10vh] sm:flex sm:justify-between sm:items-center ">
                 <div class="flex text-2xl  sm:flex">
                     <h1 id="hora">
                             
                     </h1>
                 </div>
-                <div class="flex">
-                    <ul id="liNav" class="liNav_class z-50 top-[0.01%] left-[0.1%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
-                        <a href="./index.html">Inicio</a>
-                        <a href="./index_2.html">Proyectos</a>
-                        <a href="./index_3.html">Contacto</a>
+
+                
+
+                <div class="flex items-baseline gap-[2rem]">
+                    <button id="botonOscuro" class="flex flex-col justify-center gap-2 ">
+                        <i class="fa-solid fa-moon fa-2xl"></i>
+                    </button>
+                    <button id="botonClaro" class="hidden flex flex-col justify-center gap-2 text-white">
+                        <i class="fa-solid fa-sun fa-2xl"></i>
+                    </button>
+
+                    <ul id="liNav" class=" liNav_class z-50 top-[0.01%] left-[0.01%] min-w-[80%] min-h-[100%] fixed  hidden  text-white flex flex-col px-[1rem] py-[10rem] gap-[1rem] items-center sm:flex sm:flex-row sm:bg-[#FFEBEB] sm:text-black sm:min-h-[10%] sm:min-w-[10%] sm:static sm:p-0">
+                        <a  href="./index.html">Inicio</a>
+                        <a  href="./index_2.html">Proyectos</a>
+                        <a  href="./index_3.html">Contacto</a>
                     </ul>
                     <div class="flex">
                         <button id="botonNav" class="flex mt-5 sm:hidden">
@@ -34,8 +44,8 @@
                 </div>
             </nav>
         </header>
-        <main class="h-[63vh] flex flex-col justify-center items-center pt-[5rem]">
-            <h1 class="pb-[2rem]">Contacto</h1>
+        <main  class="h-[63vh] flex flex-col justify-center items-center pt-[5rem]">
+            <h1 id="parrafoContacto" class="pb-[2rem]">Contacto</h1>
             <section class="flex">
                 <!-- formulario -->
                 <form id="formulario" class="flex flex-col justify-center gap-2">
@@ -72,7 +82,7 @@
                 </form>
             </section>
         </main>
-        <footer class="flex flex-col mt-[7rem]  shadow-inner shadow-slate-100 bg-[#FFEBEB]">
+        <footer id="footer" class="footer flex flex-col mt-[7rem]  shadow-inner shadow-slate-100 ">
 <!--             <figure class="flex h-[100px] w-[200px] ">
                 <img src="./imagenes/undraw_code_thinking_re_gka2.svg" alt="Imagen pensando ">
             </figure> -->
