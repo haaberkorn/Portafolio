@@ -203,6 +203,7 @@ formulario.addEventListener("submit", validarBoton) ;
 const botonOscuro = document.getElementById("botonOscuro");
 const botonClaro = document.getElementById("botonClaro");
 const modoOscuro = document.getElementById("modoOscuro");
+
 const cambiarColorOscuro = () =>{
 
     let parrafoContacto = document.getElementById("parrafoContacto");
@@ -214,31 +215,45 @@ const cambiarColorOscuro = () =>{
     let spanBoton = document.getElementById("spanBoton");
 
     modoOscuro.classList.add("fondoOscuro");
+
     parrafoContacto.classList.add("blanco");
     hora.classList.add("blanco");
-    hora.classList.remove("negro")
+
     botonNav.classList.add("blanco");
+
     botonxsNav.classList.add("blanco");
+
     botonEnviar.classList.add("blanco");
     footer.classList.add("blanco");
     
-    spanBoton.classList.add("blanco");
-    spanBoton.classList.remove("negro");
+    
+   
+
 
     botonOscuro.classList.toggle("hidden");
     botonClaro.classList.toggle("hidden");
 }
-
 botonOscuro.addEventListener("click",cambiarColorOscuro)
 
 const cambiarColorClaro = () => {
     modoOscuro.classList.remove("fondoOscuro");
+    hora.classList.add("cambio");
+    hora.classList.remove("blanco");
 
+    parrafoContacto.classList.add("cambio");
+    parrafoContacto.classList.remove("blanco");
+
+    botonNav.classList.add("cambio");
+    botonNav.classList.remove("blanco");
 
     
+    botonEnviar.classList.add("cambio");
+    botonEnviar.classList.remove("blanco");
+
+    footer.classList.add("cambio");
+    footer.classList.remove("blanco");
 
     botonOscuro.classList.toggle("hidden");
     botonClaro.classList.toggle("hidden");
 }
-
 botonClaro.addEventListener("click",cambiarColorClaro);
